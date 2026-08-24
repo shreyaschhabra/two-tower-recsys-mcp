@@ -13,7 +13,7 @@ from mcp.client.stdio import stdio_client
 # ─── Page config ──────────────────────────────────────────────────────────────
 
 st.set_page_config(
-    page_title="Amazon Neural Recommender",
+    page_title="Two-Tower Recommender",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -109,7 +109,7 @@ def query(message: str, mcp: _MCP, api_key: str) -> dict:
     config = types.GenerateContentConfig(
         tools=[types.Tool(function_declarations=mcp.fn_decls)],
         system_instruction=(
-            "You are a shopping assistant for an Amazon Video Games recommender "
+            "You are a shopping assistant for a video-games recommender "
             "trained on real Amazon review data. Use the available tools to answer "
             "the user. When you show recommendations or similar items, briefly "
             "explain why they were surfaced. Item and user IDs must come from tool "
@@ -189,7 +189,7 @@ if "api_key" not in st.session_state:
     st.session_state.api_key = _default_api_key()
 
 with st.sidebar:
-    st.markdown("### Amazon Neural Recommender")
+    st.markdown("### Two-Tower Recommender")
     st.caption("Two-tower deep retrieval model, MCP-served, chat via Gemini")
 
     if not st.session_state.api_key:

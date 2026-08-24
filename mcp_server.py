@@ -1,4 +1,4 @@
-"""MCP tool server for the two-tower Amazon Video Games recommender.
+"""MCP tool server for the two-tower video-games recommender.
 
 Exposes trained-model inference (recommendation, similarity, cold-start
 search, and explanation) as MCP tools any MCP-compatible agent can call.
@@ -21,7 +21,7 @@ from sentence_transformers import SentenceTransformer  # imports torch internall
 import faiss
 from fastmcp import FastMCP
 
-mcp = FastMCP("Amazon Video Games Recommender")
+mcp = FastMCP("Two-Tower Video Games Recommender")
 
 with open("data/processed/mappings.pkl", "rb") as f:
     MAPPINGS = pickle.load(f)

@@ -1,5 +1,5 @@
 """
-Loads raw Amazon Reviews 2023 (All_Beauty) data, applies 5-core filtering,
+Loads raw Amazon Reviews 2023 (Video_Games) data, applies 5-core filtering,
 builds user/item ID mappings, and creates a leave-last-two-out temporal
 train/valid/test split (standard sequential-recommendation protocol:
 each user's last interaction -> test, second-to-last -> valid, rest -> train).

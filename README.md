@@ -1,4 +1,4 @@
-# Amazon Neural Recommender — Two-Tower Retrieval, Served over MCP
+# Two-Tower Recsys MCP — Neural Retrieval, Served over MCP
 
 A deep-learning two-tower recommendation model trained on Amazon's own 2023
 review corpus, served as an [MCP](https://modelcontextprotocol.io) (Model
