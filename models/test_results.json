@@ -1,0 +1,15 @@
+{
+  "metrics": {
+    "Recall@10": 0.014033526783006086,
+    "HitRate@10": 0.014033526783006086,
+    "NDCG@10": 0.007025881960831057,
+    "n_eval_users": 98906
+  },
+  "num_users": 98906,
+  "num_items": 26354,
+  "n_train_interactions": 659693,
+  "n_valid_interactions": 98906,
+  "n_test_interactions": 98906,
+  "k": 10,
+  "protocol": "leave-one-out, full-catalog ranking (no sampled negatives)"
+}
