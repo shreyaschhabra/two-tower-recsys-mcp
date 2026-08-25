@@ -192,13 +192,14 @@ with st.sidebar:
     st.markdown("### Two-Tower Recommender")
     st.caption("Two-tower deep retrieval model, MCP-served, chat via Gemini")
 
+    # The key comes only from configured secrets -- visitors are never asked
+    # for one. Locally: .streamlit/secrets.toml. On Streamlit Community Cloud:
+    # the app's Settings -> Secrets panel.
     if not st.session_state.api_key:
-        st.session_state.api_key = st.text_input(
-            "Gemini API key", type="password",
-            help="Get a free key at aistudio.google.com/apikey",
+        st.error(
+            "GEMINI_API_KEY is not configured. Set it in the app's "
+            "Settings -> Secrets (Streamlit Cloud) or in .streamlit/secrets.toml (local)."
         )
-    if not st.session_state.api_key:
-        st.info("Enter a Gemini API key to start chatting.")
         st.stop()
 
     st.divider()
