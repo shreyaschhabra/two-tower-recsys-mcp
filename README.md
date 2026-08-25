@@ -1,5 +1,7 @@
 # Two-Tower Recsys MCP — Neural Retrieval, Served over MCP
 
+**[Live demo →](https://two-tower-recsys-mcp.streamlit.app/)**
+
 A deep-learning two-tower recommendation model trained on Amazon's own 2023
 review corpus, served as an [MCP](https://modelcontextprotocol.io) (Model
 Context Protocol) tool server, with a Streamlit chat frontend that lets a
